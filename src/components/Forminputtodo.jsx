@@ -9,6 +9,7 @@ const Forminputtodo = ({ addTodo }) => {
   const diklik = (e) => {
     e.preventDefault();
     addTodo(todo);
+    setTodo("");
   };
   return (
     <>

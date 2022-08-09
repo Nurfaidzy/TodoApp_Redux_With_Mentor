@@ -8,12 +8,19 @@ const todo = ({ id, dilakukan, ubahtodo, data, sudah }) => {
     ubahtodo(id, dilakukan);
   };
   return (
-    <div onClick={handle}>
-      <span>{id}</span>
-      &nbsp;
-      <span>{dilakukan}</span>
-      &nbsp;
-      <span>{sudah ? "udah" : "belom"}</span>
+    <div>
+      <div>
+        <input type="hidden" name="" value={id} />
+        {dilakukan}
+      </div>
+      <div className="pt-4 flex justify-end">
+        <input
+          type="button"
+          value={sudah ? "Sudah" : "Belom nih"}
+          className="p-2 bg-[#E2DCC8] text-[#100F0F] rounded-xl"
+          onClick={handle}
+        />
+      </div>
     </div>
   );
 };
