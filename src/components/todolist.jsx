@@ -1,11 +1,10 @@
 import Todo from "./todo";
 import { connect } from "react-redux";
+import React from "react";
 
 const todolist = ({ id, data }) => {
   return (
     <div>
-      <p>list todo</p>
-
       {id.map((item, i) => {
         return <Todo key={i} id={item} data={data} />;
       })}
