@@ -12,7 +12,10 @@ const lakukan = (state = todo, action) => {
         dilakukan: {
           ...state.dilakukan,
           [action.payload.id]: action.payload.dilakukan,
-          complete: false,
+        },
+        complete: {
+          ...state.complete,
+          [action.payload.id]: false,
         },
       };
     case "UDAH":
@@ -21,7 +24,10 @@ const lakukan = (state = todo, action) => {
         dilakukan: {
           ...state.dilakukan,
           [action.payload.id]: action.payload.dilakukan,
-          complete: !state.dilakukan[action.payload.id].complete,
+        },
+        complete: {
+          ...state.complete,
+          [action.payload.id]: true,
         },
       };
     default:

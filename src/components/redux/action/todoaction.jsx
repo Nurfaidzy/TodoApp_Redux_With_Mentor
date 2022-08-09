@@ -1,4 +1,4 @@
-let lanjutanid = 0;
+let lanjutanid = 1;
 
 const tambahtodo = (todo) => {
   return {
@@ -10,16 +10,17 @@ const tambahtodo = (todo) => {
   };
 };
 
-const udahbelom = (id) => {
+const aksinya = (id, dilakukan) => {
   return {
     type: "UDAH",
     payload: {
-      id: id,
+      id,
+      dilakukan: dilakukan,
     },
   };
 };
 
 export default {
   tambahtodo,
-  udahbelom,
+  aksinya,
 };
