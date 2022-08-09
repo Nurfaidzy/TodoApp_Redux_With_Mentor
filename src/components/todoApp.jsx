@@ -12,7 +12,7 @@ const TodoApp = () => {
   };
   return (
     <>
-      <div className="laptop:hidden">
+      <div className="">
         <div
           className={
             buka

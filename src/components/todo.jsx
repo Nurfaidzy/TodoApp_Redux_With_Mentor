@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import Todoaction from "./redux/action/todoaction";
 
 const todo = ({ id, dilakukan, ubahtodo, data, sudah }) => {
-  console.log(data);
   const handle = () => {
     ubahtodo(id, dilakukan);
   };
